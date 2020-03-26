@@ -1,16 +1,21 @@
+// CREATED AN OBJECT
 const EmptyGame = () => ({
+
+  // PROPERTIES/VALUES
   playerSpins: 0,
-  remainingSpins: 10,
+  fundsAvailable: 500,
   spinsMade: 0,
   gameState: '',
   gameWon: false,
   winCount: 0,
 });
 
-// NOT A FUNCTION, BUT AN OBJECT
+// NOT A FUNCTION, BUT AN INSTANCE OF THE OBJECT
 let game = EmptyGame();
 
-$('.container .slot').jSlots({
+$('.slot').jSlots({
+
+  // PROPERTIES/VALUES
   number: 5,
   winnerNumber: 1,
   spinner: '#playSlot',
@@ -18,34 +23,38 @@ $('.container .slot').jSlots({
   time: 100,
   loops: 6,
 
+  // ONSTART() THAT START THE GAME
   onStart: () => {
     $('.slot').removeClass('winner');
 
+    // () => TO PLAY THE GAME
     playGame = () => {
-      game.remainingSpins = game.remainingSpins - 1;
+      game.fundsAvailable = game.fundsAvailable - 50;
       game.spinsMade = game.spinsMade + 1;
-      game.gameState = `Attempts: ${game.spinsMade}, Remaining Spins: ${game.remainingSpins}`;
+      game.gameState = `Attempts: ${game.spinsMade}, Funds Available: $${game.fundsAvailable}`;
 
-      if (game.remainingSpins > game.playerSpins) {
+      // IF FUNDS AVAILABLE MORE ATTEMPTS
+      if (game.fundsAvailable > game.playerSpins) {
         $('#attempts').html(game.gameState);
       }
 
-      if ((game.remainingSpins - 1) < 0) {
+      // PROBLEM WITH IF STATEMENT
+      if ((game.fundsAvailable - 1) < 0) {
         game.gameWon = true;
         endGame();
       }
 
+      // ADD EVENT LISTENER TO CLICK BUTTON
       $('#resetSlot').click(function () {
-        console.log("Yeah D..")
         reset()
       });
 
-      // Think about putting (onWin()) here?????????
-
-      console.log(game.remainingSpins + 1);
+      // LOGGING THE REMAINING
+      console.log(game.fundsAvailable);
 
     }
 
+    // RESET THE GAME () =>
     reset = () => {
       game = EmptyGame();
       $('#attempts').html(game.gameState);
@@ -53,7 +62,7 @@ $('.container .slot').jSlots({
       $('#playSlot').attr('disabled', false);
     }
 
-
+    // GAME OVER () =>
     endGame = () => {
       if (game.gameWon === true) {
         $('#attempts').html("Game Over");
@@ -63,42 +72,35 @@ $('.container .slot').jSlots({
       }
     }
 
+    // CALLING THE PLAYGAME()
     playGame();
   },
-
+  
+  // APPLIES ONLY TO WINS AND LOSSES
   onWin: (winCount, winners) => {
-    // APPLIES ONLY TO WINS
+    
 
     // $.each(winners, () => {
     //   $('.slot').addClass('winner');
     // });
 
-    // RESPOND TO # OF WINNING SLOTS
-    console.log('Hi', winCount);
+    // MORE THAN ONE LEMON AND FUNDS INCREMENT (REMAINS SAME)
+    if (winCount > 1) {      
+      $('#attempts').html(game.fundsAvailable += 50);
+      $('#attempts').html(game.gameState);
+    }
+
+
+    // RESPOND TO # OF LEMONS
     if (winCount === 1) {
       $('#results').html(`You got ${winCount} LEMON!!!`);
     } else if (winCount > 1) {
-      $('#results').html(`You got ${winCount} LEMONS!!!`);
+      $('#results').html(`You got ${winCount} LEMONS, and earned $50!!!!!!`);
     } else {
       $('#results').html(`You got Nothing`);
     }
+    console.log('Hi', winCount);
 
   }
 
 });
-
-
-// const canvas = document.getElementById("demoCanvas");
-// if (canvas.getContext) {
-//   let ctx = canvas.getContext("2d");
-//   let gradient = ctx.createLinearGradient(10, 0, 500, 0);
-//   gradient.addColorStop(0, 'red');
-//   gradient.addColorStop(1 / 6, 'orange');
-//   gradient.addColorStop(2 / 6, 'yellow');
-//   gradient.addColorStop(3 / 6, 'green');
-//   gradient.addColorStop(4 / 6, 'blue');
-//   gradient.addColorStop(5 / 6, 'indigo');
-//   gradient.addColorStop(1, 'violet');
-//   ctx.fillStyle = gradient;
-//   ctx.fillRect(0, 0, 500, 75);
-// }
