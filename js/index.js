@@ -20,7 +20,7 @@ $('.slot').jSlots({
   winnerNumber: 1,
   spinner: '#playSlot',
   easing: 'easeOutSine',
-  time: 100,
+  time: 3000,
   loops: 6,
 
   // ONSTART() THAT START THE GAME
