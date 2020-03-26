@@ -50,6 +50,7 @@ $('.container .slot').jSlots({
       game = EmptyGame();
       $('#attempts').html(game.gameState);
       $('#results').html('');
+      $('#playSlot').attr('disabled', false);
     }
 
 

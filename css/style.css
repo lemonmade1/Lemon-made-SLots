@@ -1,6 +1,110 @@
 /* /////////////////////////////////////////
-              CONTAINER
+            LOGO CONTAINER
 ///////////////////////////////////////// */
+
+div#logoWrapper span {
+  display: block;
+  width: 100px;
+  border: 7px solid white;
+  height: 32px;
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  background-color: #333;
+  transform-origin: top right;
+  z-index: -4;
+}
+
+div#logo {
+  border-radius: 50%;
+  border: 33px solid #fff;
+  width: 166px;
+  height: 153px;
+  position: relative;
+  left: 2px;
+  top: -9px;
+}
+
+span#logo1 {
+  transform: translate(-35px, 55px) rotate(0deg);
+}
+
+span#logo2 {
+  transform: translate(-70px, 90px) rotate(45deg);
+}
+
+span#logo3 {
+  transform: translate(-130px, 70px) rotate(90deg);
+}
+
+span#logo4 {
+  transform: translate(-160px, 20px) rotate(135deg);
+}
+
+span#logo5 {
+  transform: translate(-145px, -35px) rotate(180deg);
+}
+
+span#logo6 {
+  transform: translate(-95px, -60px) rotate(225deg);
+}
+
+span#logo7 {
+  transform: translate(-45px, -45px) rotate(270deg);
+}
+
+span#logo8 {
+  transform: translate(-20px, 5px) rotate(315deg);
+}
+
+h1 {
+  font-family: "Univers LT 55";
+  text-transform: upperCase;
+  font-size: 80px;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  text-align: left;
+  line-height: 50px;
+}
+
+h1 span {
+  font-family: "Univers CE 45 Light", "SF UI Text Medium Italic";
+  font-size: 25px;
+  display: block;
+  letter-spacing: 20px;
+  text-indent: 30px;
+}
+
+@keyframes spinner {
+  0% {
+      transform: translate(800px, -25px) rotate(378px);
+      opacity: 0.5;
+      margin-left: 100%;
+  }
+  100% {
+      transform: translate(2px, -25px) rotate(-56px);
+      opacity: 1;
+      margin-left: 0%;
+  }
+}
+
+#logoWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation-name: spin;
+  animation-duration: 2s;
+  transform: rotate(-18deg);
+  animation: spinner 1.5s 2s linear both;
+}
+
+
+/* /////////////////////////////////////////
+            SLOT CONTAINER
+///////////////////////////////////////// */
+
 ul {
   padding: 0;
   margin: 0;
@@ -33,6 +137,7 @@ ul {
 .container .slot:first-child li {
   border-left: none;
 }
+
 
 /* .container .slot li:nth-child(7) {
   background-color: rgba(23, 150, 48, 0.851);
@@ -67,51 +172,50 @@ ul {
   display: block;
 }
 
-/* /////////////////////////////////////////
-                ANIMATIONS
-///////////////////////////////////////// */
-@keyframes winner {
 
+/* /////////////////////////////////////////
+              ANIMATIONS
+///////////////////////////////////////// */
+
+@keyframes winner {
   0%,
   50%,
   100% {
-    transform: rotate(0deg);
-    font-size: 70px;
-    color: #fff;
+      transform: rotate(0deg);
+      font-size: 70px;
+      color: #fff;
   }
-
   25% {
-    transform: rotate(20deg);
-    font-size: 90px;
-    color: #FF16D8;
+      transform: rotate(20deg);
+      font-size: 90px;
+      color: #FF16D8;
   }
-
   75% {
-    transform: rotate(-20deg);
-    font-size: 90px;
-    color: #FF16D8;
+      transform: rotate(-20deg);
+      font-size: 90px;
+      color: #FF16D8;
   }
 }
 
 @keyframes winnerBox {
-
   0%,
   50%,
   100% {
-    box-shadow: inset 0 0 0px yellow;
-    background-color: #FF0000;
+      box-shadow: inset 0 0 0px yellow;
+      background-color: #FF0000;
   }
-
   25%,
   75% {
-    box-shadow: inset 0 0 30px yellow;
-    background-color: aqua;
+      box-shadow: inset 0 0 30px yellow;
+      background-color: aqua;
   }
 }
+
 
 /* .winner li {
   animation: winnerBox 2s infinite linear;
 } */
+
 
 /* .winner li span {
   animation: winnerBox 2s infinite linear;
