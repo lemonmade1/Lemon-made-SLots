@@ -1,79 +1,91 @@
-// let msg = document.getElementById('msg')
-// document.write(`Messag: ${winCount}`)
+const EmptyGame = () => ({
+  playerSpins: 0,
+  remainingSpins: 10,
+  spinsMade: 0,
+  gameState: '',
+  gameWon: false,
+  winCount: 0,
+});
 
-// let recall = () => {
-//   $('#result').empty();
-// }
-
-const output = document.querySelector('#result')
-
-let playerSpins = 0;
-let remainingSpins = 10;
-let spinsMade = 0;
-let gameState = '';
-let gameWon = false;
+// NOT A FUNCTION, BUT AN OBJECT
+let game = EmptyGame();
 
 $('.container .slot').jSlots({
   number: 5,
   winnerNumber: 1,
   spinner: '#playSlot',
   easing: 'easeOutSine',
-  time: 2000,
+  time: 100,
   loops: 6,
 
   onStart: () => {
     $('.slot').removeClass('winner');
 
-    function playGame() {
-      remainingSpins = remainingSpins -1;
-      spinsMade = spinsMade +1;
-      gameState = `Attempts: ${spinsMade}, Remaining Spins: ${remainingSpins}`;
+    playGame = () => {
+      game.remainingSpins = game.remainingSpins - 1;
+      game.spinsMade = game.spinsMade + 1;
+      game.gameState = `Attempts: ${game.spinsMade}, Remaining Spins: ${game.remainingSpins}`;
 
-      
-
-      if (playerSpins < remainingSpins) {
-        output.innerHTML = gameState;
+      if (game.remainingSpins > game.playerSpins) {
+        $('#attempts').html(game.gameState);
       }
-      console.log(remainingSpins);
-      // if (playerSpins < 1) {
-      //   endGame();
-      // }
+
+      if ((game.remainingSpins - 1) < 0) {
+        game.gameWon = true;
+        endGame();
+      }
+
+      $('#resetSlot').click(function () {
+        console.log("Yeah D..")
+        reset()
+      });
+
+      // Think about putting (onWin()) here?????????
+
+      console.log(game.remainingSpins + 1);
 
     }
-    function endGame() {
-      if (spinsMade < remainingSpins) {
-        console.log("next")
-        gameWon = true;
-      }
-      
+
+    reset = () => {
+      game = EmptyGame();
+      $('#attempts').html(game.gameState);
+      $('#results').html('');
     }
 
-  playGame()
+
+    endGame = () => {
+      if (game.gameWon === true) {
+        $('#attempts').html("Game Over");
+        $('#playSlot').attr('disabled', true);
+      } else {
+        $('#attempts').html("No more spins left");
+      }
+    }
+
+    playGame();
   },
-  
 
   onWin: (winCount, winners) => {
-    // only fires if you win
+    // APPLIES ONLY TO WINS
 
-    $.each(winners, () => {
-      $('.slot').addClass('winner');
-    });
+    // $.each(winners, () => {
+    //   $('.slot').addClass('winner');
+    // });
 
-    // react to the # of winning slots
+    // RESPOND TO # OF WINNING SLOTS
+    console.log('Hi', winCount);
     if (winCount === 1) {
-      console.log(`You got ${winCount} LEMON!!!`);
+      $('#results').html(`You got ${winCount} LEMON!!!`);
     } else if (winCount > 1) {
-      console.log(`You got ${winCount} LEMON’s!!!`);
-    } else if (winCount === 0) {
-      console.log(`You got Nothing`)
+      $('#results').html(`You got ${winCount} LEMONS!!!`);
+    } else {
+      $('#results').html(`You got Nothing`);
     }
-
 
   }
 
 });
 
-// recall()
 
 // const canvas = document.getElementById("demoCanvas");
 // if (canvas.getContext) {

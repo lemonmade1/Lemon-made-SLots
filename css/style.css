@@ -20,7 +20,7 @@ ul {
 
 .container .slot li {
   width: 100px;
-  line-height: 100px;
+  line-height: 98px;
   text-align: center;
   font-size: 70px;
   font-weight: bold;
@@ -109,6 +109,10 @@ ul {
   }
 }
 
-.winner li, .winner li span {
+/* .winner li {
   animation: winnerBox 2s infinite linear;
-}
+} */
+
+/* .winner li span {
+  animation: winnerBox 2s infinite linear;
+} */
