@@ -36,7 +36,7 @@ $('.slot').jSlots({
         endGame();
       }
 
-      $('#resetSlot').click(function () {
+      $('#resetSlot').click(() => {
         reset();
         // $('.slot').reset()
       });
