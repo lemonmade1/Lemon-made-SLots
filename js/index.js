@@ -19,7 +19,7 @@ $('.slot').jSlots({
   number: 5,
   winnerNumber: 1,
   spinner: '#playSlot',
-  easing: 'easeOutSine',
+  easing: 'easeInOutQuad',
   time: 3000,
   loops: 6,
 
@@ -31,7 +31,7 @@ $('.slot').jSlots({
     playGame = () => {
       game.fundsAvailable = game.fundsAvailable - 50;
       game.spinsMade = game.spinsMade + 1;
-      game.gameState = `Attempts: ${game.spinsMade},<br/><br/> Funds Available: $${game.fundsAvailable}`;
+      game.gameState = `Attempts: ${game.spinsMade},<br/> Funds Available: $${game.fundsAvailable}`;
 
       // IF FUNDS AVAILABLE MORE ATTEMPTS
       if (game.fundsAvailable > game.playerSpins) {
@@ -65,10 +65,10 @@ $('.slot').jSlots({
     // GAME OVER () =>
     endGame = () => {
       if (game.gameWon === true) {
-        $('#attempts').html("Game Over");
+        $('#attempts').html("Game Over! <br/> Thanks for playing!");
         $('#playSlot').attr('disabled', true);
       } else {
-        $('#attempts').html("No more spins left!");
+        $('#attempts').html("You have no more spins left! <br/> Thanks for playing!");
       }
     }
 
@@ -77,19 +77,17 @@ $('.slot').jSlots({
   },
   
   // APPLIES ONLY TO WINS AND LOSSES
-  onWin: (winCount, winners) => {
-    
-
-    // $.each(winners, () => {
-    //   $('.slot').addClass('winner');
-    // });
+  onWin: (winCount) => {
 
     // MORE THAN ONE LEMON AND FUNDS INCREMENT (REMAINS SAME)
-    if (winCount > 1) {      
+    if (winCount >= 3) {      
+      $('#attempts').html(game.fundsAvailable += 100);
+      $('#attempts').html(game.gameState);
+    }
+    else if (winCount === 2) {      
       $('#attempts').html(game.fundsAvailable += 50);
       $('#attempts').html(game.gameState);
     }
-
 
     // RESPOND TO # OF LEMONS
     if (winCount === 1) {
@@ -97,7 +95,7 @@ $('.slot').jSlots({
     } else if (winCount > 1) {
       $('#results').html(`You got ${winCount} LEMONS, and earned $50!!!`);
     } else {
-      $('#results').html(`You got Nothing!`);
+      $('#results').html(`You received no LEMONS!`);
     }
     console.log('Hi', winCount);
 
