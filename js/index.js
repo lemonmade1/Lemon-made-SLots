@@ -82,7 +82,7 @@ $('.slot').jSlots({
     } else {
       $('#results').html(`You received no LEMONS!`);
     }
-    console.log(`How many win ${winCount}`);
+    console.log(`Lemons: ${winCount}`);
 
   }
 
