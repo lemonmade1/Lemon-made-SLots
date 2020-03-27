@@ -229,8 +229,70 @@ ul {
 
 #attempts {
   position: absolute;
-  top: 13em;
+  top: 11em;
   font-size: 24px;
   color: yellow;
   text-shadow: 1px 1px 1px black;
+}
+
+/* /////////////////////////////////////////
+              MEDIA QUERY
+///////////////////////////////////////// */
+
+@media screen and (max-width: 625px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h1 span {
+    font-size: 15px;
+    letter-spacing: 14px;
+    text-indent: 20px;
+  }
+
+@keyframes spinner {
+  0% {
+    transform: translate(800px, -25px) rotate(378deg);
+    opacity: 0.5;
+    margin-left: 100%;
+  }
+  100% {
+    transform: translate(2px, -25px) rotate(-56deg);
+    opacity: 1;
+    margin-left: 0%;
+    }
+  }
+
+  #logoWrapper {
+    animation-name: spin;
+    animation-duration: 2s;
+    transform: rotate(-18deg);
+    animation: spinner 1.5s 2s linear both;
+  }
+  
+  .jSlots-wrapper {
+    overflow: hidden;
+    height: 75px;
+    width: 335px;
+    display: inline-block;
+    border: 5px solid yellow;
+  }
+
+  .container .slot li {
+    width: 65px;
+}
+  
+  #attempts {
+    top: 11em;
+}
+
+   span.imgDiv {
+    width: 65px;
+    height: 65px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
