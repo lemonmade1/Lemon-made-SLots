@@ -2,8 +2,9 @@
 
 ![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true)
 
-
-<img align="center" width="500" height="700" src="https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?" raw=true>
+<p align="center">
+<img id="centered" width="500" height="700" src="https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?" raw=true>
+</p>
 
 
 # Technologies #
