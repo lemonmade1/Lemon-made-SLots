@@ -1,7 +1,7 @@
 # Lemon-made-SLots #
 
 <p align="center">
-<img id="centered" width="90%" height="700" src="https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?" raw=true>
+<img id="centered" width="70%" height="700" src="https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?" raw=true>
 </p>
 
 
