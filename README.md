@@ -1,9 +1,6 @@
 # Lemon-made-SLots #
 
-| ![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true) |
-| :--: | 
-
-
+-> ![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true) <- 
   
 # Technologies #
 #### HTML, CSS, JavaScript, Jquery, Jquery Libraries 
@@ -19,4 +16,5 @@
 ##### • Make sure to validate what the user is doing #####
 ##### • Use at least three FUNCTIONS to modularize the program (start(), end(), reset()) #####
 
+# WebSite #
 [Visit website](https://lemonmade1.github.io/Lemon-made-SLots/ "Lemon'made Slots")
