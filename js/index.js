@@ -31,7 +31,7 @@ $('.slot').jSlots({
     playGame = () => {
       game.fundsAvailable = game.fundsAvailable - 50;
       game.spinsMade = game.spinsMade + 1;
-      game.gameState = `Attempts: ${game.spinsMade}, Funds Available: $${game.fundsAvailable}`;
+      game.gameState = `Attempts: ${game.spinsMade},<br/><br/> Funds Available: $${game.fundsAvailable}`;
 
       // IF FUNDS AVAILABLE MORE ATTEMPTS
       if (game.fundsAvailable > game.playerSpins) {
@@ -68,7 +68,7 @@ $('.slot').jSlots({
         $('#attempts').html("Game Over");
         $('#playSlot').attr('disabled', true);
       } else {
-        $('#attempts').html("No more spins left");
+        $('#attempts').html("No more spins left!");
       }
     }
 
@@ -93,11 +93,11 @@ $('.slot').jSlots({
 
     // RESPOND TO # OF LEMONS
     if (winCount === 1) {
-      $('#results').html(`You got ${winCount} LEMON!!!`);
+      $('#results').html(`You got ${winCount} LEMON!`);
     } else if (winCount > 1) {
-      $('#results').html(`You got ${winCount} LEMONS, and earned $50!!!!!!`);
+      $('#results').html(`You got ${winCount} LEMONS, and earned $50!!!`);
     } else {
-      $('#results').html(`You got Nothing`);
+      $('#results').html(`You got Nothing!`);
     }
     console.log('Hi', winCount);
 

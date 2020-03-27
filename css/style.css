@@ -44,11 +44,11 @@ body {
 #logo {
   border-radius: 50%;
   border: 25px solid #440909;
-  width: 200px;
-  height: 200px;
+  width: 195px;
+  height: 195px;
   position: relative;
   left: 5px;
-  top: 3px;
+  top: 4px;
   z-index: -4;
 }
 
@@ -74,7 +74,7 @@ h1 {
   font-size: 80px;
   letter-spacing: 10px;
   position: absolute;
-  top: 10px;
+  top: 57px;
   left: 150px;
   text-align: left;
   line-height: 50px;
@@ -149,7 +149,7 @@ ul {
 
 .container .slot li {
   width: 98px;
-  line-height: 100px;
+  line-height: 48px;
   text-align: center;
   font-size: 77px;
   font-weight: bold;
@@ -266,8 +266,67 @@ ul {
 
 #attempts {
   position: absolute;
-  top: 13em;
+  top: 12em;
   font-size: 24px;
   color: yellow;
   text-shadow: 1px 1px 1px black;
+}
+
+
+/* /////////////////////////////////////////
+              MEDIA QUERY
+///////////////////////////////////////// */
+
+@media screen and (max-width: 625px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h1 span {
+    font-size: 15px;
+    letter-spacing: 14px;
+    text-indent: 20px;
+  }
+
+@keyframes spinner {
+  0% {
+    transform: translate(800px, -25px) rotate(378deg);
+    opacity: 0.5;
+    margin-left: 100%;
+  }
+  100% {
+    transform: translate(2px, -25px) rotate(-56deg);
+    opacity: 1;
+    margin-left: 0%;
+    }
+  }
+
+  #logoWrapper {
+    animation-name: spin;
+    animation-duration: 2s;
+    transform: rotate(-18deg);
+    animation: spinner 1.5s 2s linear both;
+  }
+  
+  .jSlots-wrapper {
+    overflow: hidden;
+    height: 75px;
+    width: 335px;
+    display: inline-block;
+    border: 5px solid yellow;
+  }
+
+  .container .slot li {
+    width: 65px;
+}
+
+   span.imgDiv {
+    width: 65px;
+    height: 65px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
