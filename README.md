@@ -1,6 +1,9 @@
 # Lemon-made-SLots #
 
-![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true)
+| ![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true) |
+| :--: | 
+
+
   
 # Technologies #
 #### HTML, CSS, JavaScript, Jquery, Jquery Libraries 
