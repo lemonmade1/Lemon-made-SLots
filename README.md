@@ -1,7 +1,7 @@
 # Lemon-made-SLots #
 
 # Wireframe "main" game screen. #
-  ![wireframe](../images/Screen Shot:Slots.png "wireframe")
+  ![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true)
 
 # Pseudocode for the overall game play.
 ##### • Generate 5 fruit images and show them to the user #####
