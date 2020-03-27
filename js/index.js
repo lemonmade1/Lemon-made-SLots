@@ -56,7 +56,8 @@ $('.slot').jSlots({
       if (game.gameWon === true) {
         $('#attempts').html("Game Over! <br/> Thanks for playing!");
         $('#playSlot').attr('disabled', true);
-      } else {
+      } 
+      else {
         $('#attempts').html("You have no more spins left! <br/> Thanks for playing!");
       }
     }
@@ -77,9 +78,11 @@ $('.slot').jSlots({
 
     if (winCount === 1) {
       $('#results').html(`You have ${winCount} LEMON!`);
-    } else if (winCount > 1) {
+    }
+    else if (winCount > 1) {
       $('#results').html(`${winCount} LEMONS,<br/> You have another ($50)!`);
-    } else {
+    }
+    else {
       $('#results').html(`You received no LEMONS!`);
     }
     console.log(`Lemons: ${winCount}`);
