@@ -1,100 +1,96 @@
 <!DOCTYPE HTML>
 <html>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lemon'made Slots</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Lemon'made Slots</title>
 
-	<!-- CSS && FONTS-->
-	<link href='https://fonts.googleapis.com/css?family=Gravitas+One&text=1234567' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css">
+		<!-- CSS && FONTS-->
+		<link href='https://fonts.googleapis.com/css?family=Gravitas+One&text=1234567' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
 
-	<!-- JAVASCRIPT -->
-	<script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script defer src="js/jquery/jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
-	<script defer src="js/jquery/jquery.easing/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
-	<script defer src="js/index.js" type="text/javascript" charset="utf-8"></script>
-</head>
+		<!-- JAVASCRIPT -->
+		<script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"
+			charset="utf-8"></script>
+		<script defer src="js/jquery/jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="js/jquery/jquery.easing/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
 
-<body>
+	<body>
 
-	
+		<div class="container">
 
-	<div class="container">
-
-		<div id="head">
-			<div id="logoWrapper">
-				<span id="logo1"></span>
-				<span id="logo2"></span>
-				<span id="logo3"></span>
-				<span id="logo4"></span>
-				<span id="logo5"></span>
-				<span id="logo6"></span>
-				<span id="logo7"></span>
-				<span id="logo8"></span>
-				<div id="logo"></div>
-			</div>
-			<h1>SLOTS <span>Lemon'made</span></h1>
-		</div>
-
-		<div id="slotMachine">
-			<ul class="slot">
-				<!-- IN REVERSE, SO THE 7'S SHOW UP FIRST -->
-				<li>
-					<span>
-						<img src="images/fruit/24.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/23.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/25.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/26.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/27.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/28.png" alt="" srcset="">
-					</span>
-				</li>
-				<li>
-					<span>
-						<img src="images/fruit/29.png" alt="" srcset="">
-					</span>
-				</li>
-			</ul>
-
-			<div>
-				<input type="button" id="playSlot" value="Spin">
-
-				<input type="reset" id="resetSlot" value="Reset">
+			<div id="head">
+				<div id="logoWrapper">
+					<span id="logo1"></span>
+					<span id="logo2"></span>
+					<span id="logo3"></span>
+					<span id="logo4"></span>
+					<span id="logo5"></span>
+					<span id="logo6"></span>
+					<span id="logo7"></span>
+					<span id="logo8"></span>
+					<div id="logo"></div>
+				</div>
+				<h1>SLOTS <span>Lemon'made</span></h1>
 			</div>
 
+			<div id="slotMachine">
+				
+				<div id="results"></div>
+				
+				<ul class="slot">
+					
+					<li>
+						<span>
+							<img src="images/fruit/24.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/23.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/25.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/26.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/27.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/28.png" alt="" srcset="">
+						</span>
+					</li>
+					<li>
+						<span>
+							<img src="images/fruit/29.png" alt="" srcset="">
+						</span>
+					</li>
+				</ul>
+
+				<div>
+					<input type="button" id="playSlot" value="Spin">
+
+					<input type="reset" id="resetSlot" value="Reset">
+				</div>
 			
+				<div id="attempts"></div>
 
-			<div id="results"></div>
-			<div id="attempts"></div>
+			</div>
 
 		</div>
 
-	</div>
-	
-	<!-- <canvas id="myCanvas" width="700" height="100vh"></canvas> -->
-
-</body>
+	</body>
 
 </html>
