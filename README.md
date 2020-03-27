@@ -1,7 +1,11 @@
 # Lemon-made-SLots #
 
-![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true){ width="800" height="600" style="display: block; margin: 0 auto" }
-  
+![wireframe](https://github.com/lemonmade1/Lemon-made-SLots/blob/gh-pages/images/Screen%20Shot:Slots.png?raw=true)
+
+
+<img align="right" width="200" height="183" src="https://cloud.githubusercontent.com/assets/532272/21507867/3376e9fe-cc4a-11e6-9350-7ec4f680da36.gif">
+
+
 # Technologies #
   #### HTML, CSS, JavaScript, Jquery, Jquery Libraries 
 
