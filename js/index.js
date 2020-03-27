@@ -75,7 +75,7 @@ $('.slot').jSlots({
       $('#attempts').html(game.fundsAvailable += 50);
       $('#attempts').html(game.gameState);
     }
-
+    
     if (winCount === 1) {
       $('#results').html(`You have ${winCount} LEMON!`);
     }
