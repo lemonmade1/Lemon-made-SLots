@@ -114,6 +114,7 @@ h1 span {
   animation: spinner 1.5s 2s linear both;
 }
 
+
 /* /////////////////////////////////////////
             SLOT CONTAINER
 ///////////////////////////////////////// */
@@ -163,35 +164,6 @@ ul {
   border-left: none;
 }
 
-/* .container .slot li:nth-child(7) {
-  background-color: rgba(23, 150, 48, 0.851);
-}
-
-.container .slot li:nth-child(6) {
-  background-color: rgb(17, 99, 187);
-}
-
-.container .slot li:nth-child(5) {
-  background-color: #FF8645;
-}
-
-.container .slot li:nth-child(4) {
-  background-color: rgb(135, 37, 7);
-}
-
-.container .slot li:nth-child(3) {
-  background-color: rgb(155, 13, 16);
-}
-
-.container .slot li:nth-child(2) {
-  background-color: rgb(155, 69, 69);
-}
-
-.container .slot li:nth-child(1),
-.container .slot li:nth-child(8) {
-  background-color: rgb(212, 0, 255);
-} */
-
 .container .slot li span {
   display: block;
 }
@@ -234,15 +206,6 @@ ul {
       background-color: aqua;
   }
 }
-
-/* .winner li {
-  animation: winnerBox 2s infinite linear;
-} */
-
-
-/* .winner li span {
-  animation: winnerBox 2s infinite linear;
-} */
 
 #playSlot, #resetSlot {
   padding: 5px 20px;
