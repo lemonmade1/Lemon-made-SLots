@@ -290,6 +290,16 @@ ul {
     width: 65px;
     height: 65px;
   }
+  
+  #btnDiv {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #resetSlot, #playSlot {
+    transform: scale(1.5);
+  }
 
   .centered {
     display: flex;
